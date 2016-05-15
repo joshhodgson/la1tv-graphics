@@ -13,7 +13,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   <script src="/socket.io/socket.io.js"></script>
+  <script src="cg.js"></script>
+<!--
   <link rel="stylesheet" href="animate.css">
+-->
+<link rel="stylesheet" href="animate.css">
+
+  <link rel="stylesheet" href="cg.css">
+
 
   <script>
     var socket = io.connect('http://' + window.location.host);
@@ -27,41 +34,7 @@
 
 
   <style>
-    #livecontainer {
-      position: absolute;
-      z-index: 10;
-      left: -15px;
-      top: 30px;
-      padding: 6px;
-      padding-left: 50px;
-      padding-right: 18px;
-      border-radius: 5px 15px;
-      background: linear-gradient(to right, rgba(255, 50, 50, 0.9), rgba(255, 0, 0, 0.7));
-      box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
-      color: white;
-      font-weight: bold;
-      font-size: 1.8em;
 
-      -webkit-animation-delay: 1s;
-    }
-
-    #clockcontainer {
-      position: absolute;
-      z-index: 9;
-      left: -15px;
-      top: 30px;
-      padding: 6px;
-      padding-left: 130px;
-      padding-right: 18px;
-      border-radius: 5px 15px;
-      background: linear-gradient(to right, rgba(0, 00, 00, 0.9), rgba(0, 0, 0, 0.7));
-      box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
-      color: white;
-      font-weight: bold;
-      font-size: 1.8em;
-
-      -webkit-animation-delay: 4s;
-    }
   </style>
 </head>
 
@@ -72,8 +45,10 @@
         Live
     </div>
     <div id="clockcontainer" class="animated slideInLeft ">
-        7:54pm
+        <div id="clockbox" width='50px'></div>
+
     </div>
+    <img id="logobox" src="logo.png" style="width:128px;"></img>
 
   </div>
 </body>
