@@ -7,7 +7,7 @@
   padding-left: 50px;
   padding-right: 18px;
   border-radius: 5px 15px;
-  background: linear-gradient(to right, rgba(255, 50, 50, 0.9), rgba(255, 0, 0, 0.7));
+  background: linear-gradient(to right, rgba(215, 50, 50, 0.9), rgba(235, 0, 0, 0.85));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
   color: white;
   font-weight: bold;
@@ -40,7 +40,60 @@
   position: absolute;
   top: 30px;
   right: 50px;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 2s;}
 
-  -webkit-filter: drop-shadow(-1px 2px 4px rgba(0, 0, 0, .5));
+#lowerthird{
+  position: absolute;
+  bottom: 90px;
+  left: 90px;
+  border-radius: 5px 15px 15px 5px;
+  background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.9));
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
+  -webkit-animation-delay: 3.5s;
+
+
+}
+.lowerthirdtext{
+  color: white;
+  font-weight: bold;
+  font-size: 2.2em;
+  padding: 12px;
+  padding-right: 20px;
+  padding-left: 30px;
+
+}
+.lowerthirdsecondline{
+  position: relative;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
+  padding: 6px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0px 0px 15px 5px;
+
+  background: linear-gradient(to right, rgba(0, 00, 00, 0.9), rgba(0, 0, 0, 0.9));
+
+}
+
+#ticker{
+  position: absolute;
+  bottom: 0px;
+  left: 10%;
+  width: 80%;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.8));
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
+  -webkit-animation-delay: 5s;
+
+}
+.ticker{
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
+  padding: 6px;
+}
+
+body{
 }
