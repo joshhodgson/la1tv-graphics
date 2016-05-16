@@ -1,6 +1,7 @@
 #livecontainer {
   position: absolute;
   z-index: 10;
+  width: 100px;
   left: 0px;
   top: 30px;
   padding: 6px;
@@ -13,9 +14,8 @@
   font-weight: bold;
   font-size: 1.8em;
   -webkit-animation-delay: 1s;
-  -webkit-transition: left 2s, opacity 1s;
-  transition: left 2s, opacity 1s;
-  left: -80px;
+  -webkit-transition: left 2s, opacity 1.5s;
+  left: -100px;
   opacity: 0;
 }
 #livecontainer.live {
@@ -44,8 +44,7 @@
   font-size: 1.8em;
   -webkit-animation-delay: 4s;
   -webkit-animation-duration: 1.8s;
-  -webkit-transition: left 2s, opacity 1s, padding-left 2s;
-  transition: left 2s, opacity 1s, padding-left 2s;
+  -webkit-transition: left 2s, opacity 2s, padding-left 2s;
   padding-left: 30px;
   left: -180px;
   opacity: 0;
@@ -56,7 +55,7 @@
   opacity: 1;
 }
 #clockcontainer.live {
-  padding-left: 118px;
+  padding-left: 125px;
   left: 0px;
   opacity: 1;
 }
