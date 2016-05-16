@@ -1,28 +1,39 @@
 #livecontainer {
   position: absolute;
   z-index: 10;
-  left: -15px;
+  left: 0px;
   top: 30px;
   padding: 6px;
-  padding-left: 50px;
+  padding-left: 30px;
   padding-right: 18px;
-  border-radius: 5px 15px;
+  border-radius: 0px 5px 15px 0px;
   background: linear-gradient(to right, rgba(215, 50, 50, 0.9), rgba(235, 0, 0, 0.85));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
   color: white;
   font-weight: bold;
   font-size: 1.8em;
   -webkit-animation-delay: 1s;
+  -webkit-transition-property: all; /* Safari */
+    transition-property: all;
+}
+#livecontainer.live {
+  opacity: 1;
+  left: 0px;
+  padding-left: 30px;
+  padding-right: 18px;
+}
+#livecontainer.hidden {
+  opacity: 0 left: -80px;
+  padding-left: 30px;
+  padding-right: 18px;
 }
 #clockcontainer {
   position: absolute;
   z-index: 9;
-  left: -15px;
   top: 30px;
   padding: 6px;
-  padding-left: 130px;
   padding-right: 18px;
-  border-radius: 5px 15px;
+  border-radius: 0px 5px 15px 0px;
   background: linear-gradient(to right, rgba(0, 00, 00, 0.9), rgba(0, 0, 0, 0.7));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
   color: white;
@@ -30,6 +41,14 @@
   font-size: 1.8em;
   -webkit-animation-delay: 4s;
   -webkit-animation-duration: 1.8s;
+}
+#clockcontainer.live {
+  padding-left: 120px;
+  left: 0px;
+}
+#clockcontainer.notlive {
+  padding-left: 30px;
+  left: 0px;
 }
 #clockbox {
   width: 110px;
@@ -40,9 +59,9 @@
   position: absolute;
   top: 30px;
   right: 50px;
-  -webkit-animation-delay: 2s;}
-
-#lowerthird{
+  -webkit-animation-delay: 2s;
+}
+#lowerthird {
   position: absolute;
   bottom: 90px;
   left: 90px;
@@ -50,19 +69,16 @@
   background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.9));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
   -webkit-animation-delay: 3.5s;
-
-
 }
-.lowerthirdtext{
+.lowerthirdtext {
   color: white;
   font-weight: bold;
   font-size: 2.2em;
   padding: 12px;
   padding-right: 20px;
   padding-left: 30px;
-
 }
-.lowerthirdsecondline{
+.lowerthirdsecondline {
   position: relative;
   bottom: 0;
   color: white;
@@ -72,12 +88,9 @@
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 0px 0px 15px 5px;
-
   background: linear-gradient(to right, rgba(0, 00, 00, 0.9), rgba(0, 0, 0, 0.9));
-
 }
-
-#ticker{
+#ticker {
   position: absolute;
   bottom: 0px;
   left: 10%;
@@ -86,16 +99,14 @@
   background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.8));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
   -webkit-animation-delay: 5s;
-
 }
-.ticker{
+.ticker {
   color: white;
   font-weight: bold;
   font-size: 1.8em;
   padding: 6px;
 }
-
-body{
-  background-color: rgba(0,0,0,0);
-overflow: hidden;
+body {
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
 }
