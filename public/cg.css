@@ -1,3 +1,4 @@
+
 #livecontainer {
   position: absolute;
   z-index: 10;
@@ -25,10 +26,7 @@
   opacity: 0;
   left: -80px;
 }
-#livecontainer.hidden {
-  opacity: 0;
-  left: -90px;
-}
+
 #clockcontainer {
   position: absolute;
   z-index: 9;
@@ -66,7 +64,7 @@
   top: 30px;
   right: 50px;
 }
-#lowerthird {
+#lowerthirdleft {
   min-width: 300px;
   position: absolute;
   bottom: 90px;
@@ -75,7 +73,7 @@
   background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.9));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
 }
-.lowerthirdtext {
+.lowerthirdtextleft {
   color: white;
   font-weight: bold;
   font-size: 2.2em;
@@ -83,7 +81,7 @@
   padding-right: 30px;
   padding-left: 30px;
 }
-.lowerthirdsecondline {
+.lowerthirdsecondlineleft {
   position: relative;
   bottom: 0;
   color: white;
@@ -93,6 +91,36 @@
   padding-left: 30px;
   padding-right: 40px;
   border-radius: 0px 0px 15px 5px;
+  background: linear-gradient(to right, rgba(0, 00, 00, 0.9), rgba(0, 0, 0, 0.9));
+}
+#lowerthirdright {
+  min-width: 300px;
+  position: absolute;
+  bottom: 90px;
+  right: 90px;
+  border-radius: 15px 5px 5px 15px;
+  background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.9));
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
+  text-align: right;
+}
+.lowerthirdtextright {
+  color: white;
+  font-weight: bold;
+  font-size: 2.2em;
+  padding: 12px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.lowerthirdsecondlineright {
+  position: relative;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
+  padding: 6px;
+  padding-left: 40px;
+  padding-right: 30px;
+  border-radius: 0px 0px 5px 15px;
   background: linear-gradient(to right, rgba(0, 00, 00, 0.9), rgba(0, 0, 0, 0.9));
 }
 #ticker {
