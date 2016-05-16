@@ -22,19 +22,23 @@ io.on('connect', function(socket) {
   socket.emit('ticker', ticker);
   socket.emit('lowerThird', l3);
   socket.on('bug', function(payload) {
+    bug = payload;
     io.emit('bug', payload)
   })
   socket.on('live', function(payload) {
+    live = payload;
     io.emit('live', payload)
-    console.log('emmited live - ' + payload)
   })
   socket.on('clock', function(payload) {
+    clock = payload;
     io.emit('clock', payload)
   })
   socket.on('ticker', function(payload) {
+    ticker = payload;
     io.emit('ticker', payload)
   })
   socket.on('lowerThird', function(payload) {
+    l3 = payload;
     io.emit('lowerThird', payload)
   })
 
