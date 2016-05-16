@@ -33,6 +33,7 @@ socket.on('connect', function(socket) {
 
 
 socket.on('live', function(payload) {
+  console.log("live data - " + payload)
   if (payload == true) {
     $("#livecontainer").addClass("live");
     $("#clockcontainer").addClass("live");
@@ -46,7 +47,7 @@ socket.on('live', function(payload) {
   }
 })
 
-socket.on('time', function(payload) {
+socket.on('clock', function(payload) {
   if (payload == true) {
     $("#clockcontainer").addClass("time");
 
