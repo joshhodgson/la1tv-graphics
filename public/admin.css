@@ -1,0 +1,46 @@
+.lowerthirdcontainer {
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+}
+
+.hide{
+  opacity: 0
+}
+.line1 {
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.line2 {
+    font-size: 1.25em;
+    padding-left: 20px;
+}
+.lowerthirdcontainer .text {
+    width: 60%;
+    margin: auto 0px;
+}
+.buttons {
+    float: right;
+    margin: auto 0 auto auto;
+}
+
+.tickertextcontainer {
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+}
+.tickertextcontainer .text {
+    width: 80%;
+    margin: auto 0px;
+}
