@@ -108,14 +108,37 @@
   background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.8));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
   -webkit-animation-delay: 5s;
+  overflow: hidden;
 }
 .ticker {
   color: white;
   font-weight: bold;
   font-size: 1.8em;
   padding: 6px;
+  text-align: center;
 }
 body {
   background-color: rgba(0, 0, 0, 0);
   overflow: hidden;
+}
+@keyframes tickermove {
+  from {
+    -webkit-transform: translate(1000px, 0px);
+  }
+  to {
+    -webkit-transform: translate(-100%, 0px);
+  }
+}
+#tickercontainer {
+  width: 100%;
+}
+#tickertext {
+  position: relative;
+  display: inline-block;
+  animation-name: tickermove;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  white-space: nowrap;
+  overflow: visible;
 }
