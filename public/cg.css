@@ -13,19 +13,22 @@
   font-weight: bold;
   font-size: 1.8em;
   -webkit-animation-delay: 1s;
-  -webkit-transition-property: all; /* Safari */
-    transition-property: all;
+  -webkit-transition: left 2s, opacity 1s;
+  transition: left 2s, opacity 1s;
+  left: -80px;
+  opacity: 0;
 }
 #livecontainer.live {
   opacity: 1;
   left: 0px;
-  padding-left: 30px;
-  padding-right: 18px;
+}
+#livecontainer.notlive {
+  opacity: 0;
+  left: -80px;
 }
 #livecontainer.hidden {
-  opacity: 0 left: -80px;
-  padding-left: 30px;
-  padding-right: 18px;
+  opacity: 0;
+  left: -90px;
 }
 #clockcontainer {
   position: absolute;
@@ -41,14 +44,21 @@
   font-size: 1.8em;
   -webkit-animation-delay: 4s;
   -webkit-animation-duration: 1.8s;
-}
-#clockcontainer.live {
-  padding-left: 120px;
-  left: 0px;
+  -webkit-transition: left 2s, opacity 1s, padding-left 2s;
+  transition: left 2s, opacity 1s, padding-left 2s;
+  padding-left: 30px;
+  left: -180px;
+  opacity: 0;
 }
 #clockcontainer.notlive {
-  padding-left: 30px;
+  padding-left: 25px;
   left: 0px;
+  opacity: 1;
+}
+#clockcontainer.live {
+  padding-left: 118px;
+  left: 0px;
+  opacity: 1;
 }
 #clockbox {
   width: 110px;
