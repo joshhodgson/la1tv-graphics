@@ -25,39 +25,89 @@
 
     <div class="tab-content">
       <div id="general" class="tab-pane fade in active">
-        <h3>General Graphics</h3>
-        <h4>Live</h4>
-        <button onclick="socket.emit('live', true)">show</button>        <button onclick="socket.emit('live', false)">hide</button>
 
-        <h4>Clock</h4>
-        <button onclick="socket.emit('clock', true)">show</button>        <button onclick="socket.emit('clock', false)">hide</button>
+          <h1>General Graphics</h1>
+          <div class="row">
+            <div class="col-sm-4" style="text-align: center">
+              <h2>Live</h2>
+              <button type="button" class="btn btn-success" onclick="socket.emit('live', true)">show</button>
+              <button type="button" class="btn btn-success" onclick="socket.emit('live', false)">hide</button>
 
-        <h4>Logo</h4>
-        <button onclick="socket.emit('bug', true)">show</button>        <button onclick="socket.emit('bug', false)">hide</button>
+              <h2>Clock</h2>
+              <button type="button" class="btn btn-success" onclick="socket.emit('clock', true)">show</button>
+              <button type="button" class="btn btn-success" onclick="socket.emit('clock', false)">hide</button>
+            </div>
+            <div class="col-sm-4" style="text-align: center">
+              <h2>Both</h2>
+            </div>
 
-        <h4>Lower Thirds</h4>
-        <button onclick="socket.emit('lowerThird', {show: true, line1: $('#line1').val(), line2: $('#line2').val()})">show</button>        <button onclick="socket.emit('lowerThird', {show:false})">hide</button>
-        <br />
-        <input id="line1">
-        <input id="line2">
-        <h4>Ticker</h4>
-        <button onclick="socket.emit('ticker', {show: true, text: $('#tickerline').val()})">show</button>        <button onclick="socket.emit('ticker', {show:false})">hide</button>
-        <br />
-        <input id="tickerline">
+            <div class="col-sm-4" style="text-align: center">
+              <h2>Logo</h2>
+              <button type="button" class="btn btn-success" onclick="socket.emit('bug', true)">show</button>
+              <button type="button" class="btn btn-success" onclick="socket.emit('bug', false)">hide</button>
+              <h2>Lower Thirds</h2>
+              <button type="button" class="btn btn-success" onclick="socket.emit('lowerThird', {show: true, line1: $('#line1').val(), line2: $('#line2').val()})">show</button>
+              <button onclick="socket.emit('lowerThird', {show:false})">hide</button>
+              <br />
+              <input id="line1">
+              <input id="line2">
+              <h2>Ticker</h2>
+              <button onclick="socket.emit('ticker', {show: true, text: $('#tickerline').val()})">show</button>
+              <button onclick="socket.emit('ticker', {show:false})">hide</button>
+              <br />
+              <input id="tickerline">
+            </div>
+          </div>
       </div>
 
       <div id="lthirds" class="tab-pane fade">
         <h3>Menu 1</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+        <h2>Logo</h2>
+        <button type="button" class="btn btn-success" onclick="socket.emit('bug', true)">show</button>
+        <button type="button" class="btn btn-success" onclick="socket.emit('bug', false)">hide</button>
+        <h2>Lower Thirds</h2>
+        <button type="button" class="btn btn-success" onclick="socket.emit('lowerThird', {show: true, line1: $('#line1').val(), line2: $('#line2').val()})">show</button>
+        <button onclick="socket.emit('lowerThird', {show:false})">hide</button>
+        <br />
+        <input id="line1">
+        <input id="line2">
+        <h2>Ticker</h2>
+        <button onclick="socket.emit('ticker', {show: true, text: $('#tickerline').val()})">show</button>
+        <button onclick="socket.emit('ticker', {show:false})">hide</button>
+        <br />
+        <input id="tickerline"> </div>
       <div id="scrollertweets" class="tab-pane fade">
         <h3>Menu 2</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      </div>
+        <h2>Logo</h2>
+        <button type="button" class="btn btn-success" onclick="socket.emit('bug', true)">show</button>
+        <button type="button" class="btn btn-success" onclick="socket.emit('bug', false)">hide</button>
+        <h2>Lower Thirds</h2>
+        <button type="button" class="btn btn-success" onclick="socket.emit('lowerThird', {show: true, line1: $('#line1').val(), line2: $('#line2').val()})">show</button>
+        <button onclick="socket.emit('lowerThird', {show:false})">hide</button>
+        <br />
+        <input id="line1">
+        <input id="line2">
+        <h2>Ticker</h2>
+        <button onclick="socket.emit('ticker', {show: true, text: $('#tickerline').val()})">show</button>
+        <button onclick="socket.emit('ticker', {show:false})">hide</button>
+        <br />
+        <input id="tickerline"> </div>
       <div id="scrollermanual" class="tab-pane fade">
         <h3>Menu 3</h3>
-        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-      </div>
+        <h2>Logo</h2>
+        <button type="button" class="btn btn-success" onclick="socket.emit('bug', true)">show</button>
+        <button type="button" class="btn btn-success" onclick="socket.emit('bug', false)">hide</button>
+        <h2>Lower Thirds</h2>
+        <button type="button" class="btn btn-success" onclick="socket.emit('lowerThird', {show: true, line1: $('#line1').val(), line2: $('#line2').val()})">show</button>
+        <button onclick="socket.emit('lowerThird', {show:false})">hide</button>
+        <br />
+        <input id="line1">
+        <input id="line2">
+        <h2>Ticker</h2>
+        <button onclick="socket.emit('ticker', {show: true, text: $('#tickerline').val()})">show</button>
+        <button onclick="socket.emit('ticker', {show:false})">hide</button>
+        <br />
+        <input id="tickerline"> </div>
     </div>
   </div>
 
