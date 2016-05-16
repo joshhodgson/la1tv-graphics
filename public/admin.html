@@ -40,6 +40,10 @@
         <br />
         <input id="line1">
         <input id="line2">
+        <h4>Ticker</h4>
+        <button onclick="socket.emit('ticker', {show: true, text: $('#tickerline').val()})">show</button>        <button onclick="socket.emit('ticker', {show:false})">hide</button>
+        <br />
+        <input id="tickerline">
       </div>
 
       <div id="lthirds" class="tab-pane fade">
