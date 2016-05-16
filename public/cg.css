@@ -13,7 +13,6 @@
   color: white;
   font-weight: bold;
   font-size: 1.8em;
-  -webkit-animation-delay: 1s;
   -webkit-transition: left 2s, opacity 1.5s;
   left: -100px;
   opacity: 0;
@@ -42,23 +41,21 @@
   color: white;
   font-weight: bold;
   font-size: 1.8em;
-  -webkit-animation-delay: 4s;
   -webkit-animation-duration: 1.8s;
   -webkit-transition: left 2s, opacity 2s, padding-left 2s;
   padding-left: 30px;
   left: -180px;
   opacity: 0;
 }
-#clockcontainer.notlive {
+#clockcontainer.time {
   padding-left: 25px;
   left: 0px;
   opacity: 1;
 }
 #clockcontainer.live {
   padding-left: 125px;
-  left: 0px;
-  opacity: 1;
 }
+
 #clockbox {
   width: 110px;
   padding-right: -10px;
@@ -68,23 +65,22 @@
   position: absolute;
   top: 30px;
   right: 50px;
-  -webkit-animation-delay: 2s;
 }
 #lowerthird {
+  min-width: 300px;
   position: absolute;
   bottom: 90px;
   left: 90px;
   border-radius: 5px 15px 15px 5px;
   background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.9));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
-  -webkit-animation-delay: 3.5s;
 }
 .lowerthirdtext {
   color: white;
   font-weight: bold;
   font-size: 2.2em;
   padding: 12px;
-  padding-right: 20px;
+  padding-right: 30px;
   padding-left: 30px;
 }
 .lowerthirdsecondline {
@@ -95,7 +91,7 @@
   font-size: 1.8em;
   padding: 6px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 40px;
   border-radius: 0px 0px 15px 5px;
   background: linear-gradient(to right, rgba(0, 00, 00, 0.9), rgba(0, 0, 0, 0.9));
 }
@@ -107,7 +103,6 @@
   border-radius: 15px 15px 0px 0px;
   background: linear-gradient(to right, rgba(200, 50, 50, 0.9), rgba(215, 0, 0, 0.8));
   box-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
-  -webkit-animation-delay: 5s;
   overflow: hidden;
 }
 .ticker {
