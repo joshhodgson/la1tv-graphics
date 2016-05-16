@@ -90,3 +90,15 @@ socket.on('lowerThird', function(payload) {
     console.log("Error - don't know what to do for l3 with " + payload)
   }
 })
+
+socket.on('ticker', function(payload) {
+  if (payload.show == true) {
+    $("#ticker").addClass("fadeInUp").removeClass("fadeOutDown");
+
+  } else if (payload.show == false) {
+    $("#ticker").addClass("fadeOutDown").removeClass("fadeInUp");
+
+  } else {
+    console.log("Error - don't know what to do for ticker bug with " + payload)
+  }
+})

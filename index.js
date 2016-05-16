@@ -11,7 +11,9 @@ app.use(express.static('public', {
 var bug = false;
 var live = false;
 var clock = false;
-var ticker = false;
+var ticker = {
+  "show": false
+};
 var l3 = {
   "show": false
 };
