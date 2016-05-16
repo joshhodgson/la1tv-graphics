@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="admin.js"></script>
 </head>
 
 <body>
@@ -25,8 +27,19 @@
       <div id="general" class="tab-pane fade in active">
         <h3>General Graphics</h3>
         <h4>Live</h4>
+        <button onclick="socket.emit('live', true)">show</button>        <button onclick="socket.emit('live', false)">hide</button>
+
         <h4>Clock</h4>
+        <button onclick="socket.emit('clock', true)">show</button>        <button onclick="socket.emit('clock', false)">hide</button>
+
         <h4>Logo</h4>
+        <button onclick="socket.emit('bug', true)">show</button>        <button onclick="socket.emit('bug', false)">hide</button>
+
+        <h4>Lower Thirds</h4>
+        <button onclick="socket.emit('lowerThird', {show: true, line1: $('#line1').val(), line2: $('#line2').val()})">show</button>        <button onclick="socket.emit('lowerThird', {show:false})">hide</button>
+        <br />
+        <input id="line1">
+        <input id="line2">
       </div>
 
       <div id="lthirds" class="tab-pane fade">
