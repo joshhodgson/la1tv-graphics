@@ -4,7 +4,9 @@ var app = express();
 var server = app.listen(3000);
 var io = socket.listen(server);
 
-app.use(express.static('public'));
+app.use(express.static('public', {
+  'extensions': ['html']
+}));
 
 var bug = false;
 var live = false;
