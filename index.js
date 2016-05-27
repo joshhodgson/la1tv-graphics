@@ -47,3 +47,6 @@ io.on('connect', function(socket) {
   })
 
 })
+
+console.log("Listening on port 3000")
+console.log("Admin at localhost:3000/admin")
