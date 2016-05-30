@@ -150,7 +150,7 @@ body {
     white-space: nowrap;
     overflow: visible;
 }
-#gridcontainer {
+#grid {
     width: 60%;
     margin: auto;
     background: rgba(0, 0, 0, .2);
@@ -175,28 +175,32 @@ body {
     font-size: 1.8em;
     background: linear-gradient(to right, rgba(20, 20, 20, 0.75), rgba(0, 0, 0, 0.75));
 }
+.gridrow.split {
+    padding: 10px 0px
+}
 .gridrow .left {
+  padding-left: 30px;
     float: left;
     text-align: left;
 }
 .gridrow .right {
+  padding-right: 30px;
+
     float: right;
     text-align: right;
 }
 .gridrow .big {
-    width: 70%
 }
 .gridrow .little {
-    width: 30%
 }
-.container1 {
+.gridcontainer {
     display: table;
     height: 100%;
     position: absolute;
     overflow: hidden;
     width: 100%;
 }
-.helper1 {
+.othergridcontainer {
     #position: absolute;
     /*a variation of an "lte ie7" hack*/
     #top: 50%;
