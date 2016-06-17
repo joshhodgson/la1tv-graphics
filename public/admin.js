@@ -37,7 +37,9 @@ function addLowerThird(line1, line2) {
 
   container.find('.down').click(function() {
     console.log('button clicked')
-    container.insertAfter(container.next())
+    if (!container.next().hasClass('hidden')){
+      container.insertAfter(container.next())
+    }
   })
 
   container.find('.up').click(function() {
