@@ -110,9 +110,5 @@ $(document).ready(function() {
       show: false
     })
   })
-  addLowerThird('hi', 'test');
-  addLowerThird('test', 'hello')
-  addTickerItem('This is my name')
-  addTickerItem('This is a test')
 
 })
