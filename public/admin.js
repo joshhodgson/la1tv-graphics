@@ -16,6 +16,8 @@ function addLowerThird(line1, line2) {
 
   container.find('.delete').click(function() {
     container.remove()
+    setTimeout(updateServerL3, 10)
+
   })
   container.find('.left').click(function() {
     socket.emit('lowerThird', {
@@ -37,15 +39,36 @@ function addLowerThird(line1, line2) {
 
   container.find('.down').click(function() {
     console.log('button clicked')
-    container.insertAfter(container.next())
+    if (!container.next().hasClass('hidden')){
+      container.insertAfter(container.next())
+      setTimeout(updateServerL3, 10)
+
+    }
   })
 
   container.find('.up').click(function() {
     console.log('button clicked')
     container.insertBefore(container.prev())
+    setTimeout(updateServerL3, 10)
+
   })
 
+  setTimeout(updateServerL3, 10)
+}
 
+function clearL3(){
+  $("#listOfL3").children().each(function(index, element){
+    if (!$(element).hasClass('hidden')){
+      $(element).remove()
+    }
+  })
+}
+function clearTicker(){
+$("#listoftickeritems").children().each(function(index, element){
+  if (!$(element).hasClass('hidden')){
+    $(element).remove()
+  }
+})
 }
 var lastT = 0;
 
@@ -58,12 +81,15 @@ function addTickerItem(text) {
 
   container.find('.delete').click(function() {
     container.remove()
+    setTimeout(updateServerTickers, 10)
+
   })
 
   container.find('.toggle').click(function() {
     addTickerToList(text)
   })
 
+  setTimeout(updateServerTickers, 10)
 
 
 }
@@ -76,6 +102,7 @@ function addTickerToList(text) {
   console.log(item.text())
 
   item.insertBefore($('#dummytickeritem'))
+  setTimeout(updateServerTickers, 10)
 
 }
 
@@ -110,9 +137,49 @@ $(document).ready(function() {
       show: false
     })
   })
-  addLowerThird('hi', 'test');
-  addLowerThird('test', 'hello')
-  addTickerItem('This is my name')
-  addTickerItem('This is a test')
 
+})
+var l3s = [];
+
+function updateServerL3(){
+  l3s = [];
+  $("#listOfL3").children().each(function(index, element){
+    if (!$(element).hasClass('hidden')){
+      var l3 = {l1: $(element).find(".line1").text(), l2: $(element).find(".line2").text()}
+      l3s.push(l3)
+    }
+  })
+  socket.emit('l3list', l3s)
+}
+socket.on('l3list', function(payload){
+  if (JSON.stringify(payload)!=JSON.stringify(l3s)){
+    clearL3()
+
+    for(var i in payload){
+      addLowerThird(payload[i].l1, payload[i].l2)
+    }
+  }
+})
+
+
+var tickerlist = []
+function updateServerTickers(){
+  tickerlist = [];
+  $("#listoftickeritems").children().each(function(index, element){
+    if (!$(element).hasClass('hidden')){
+      var tickerobj = {l1: $(element).find(".line1").text()}
+      tickerlist.push(tickerobj)
+    }
+  })
+  socket.emit('tickerlist', tickerlist)
+  console.log('emmitted' + tickerlist)
+}
+socket.on('tickerlist', function(payload){
+  if (JSON.stringify(payload)!=JSON.stringify(tickerlist)){
+    clearTicker()
+
+    for(var i in payload){
+      addTickerItem(payload[i].l1)
+    }
+  }
 })

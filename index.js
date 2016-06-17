@@ -17,7 +17,8 @@ var ticker = {
 var l3 = {
   "show": false
 };
-
+var l3list = []
+var tickerlist = []
 io.on('connect', function(socket) {
   console.log("Socket client connected");
   socket.emit('bug', bug);
@@ -25,6 +26,9 @@ io.on('connect', function(socket) {
   socket.emit('clock', clock);
   socket.emit('ticker', ticker);
   socket.emit('lowerThird', l3);
+  socket.emit('l3list', l3list)
+  socket.emit('tickerlist', tickerlist)
+
   socket.on('bug', function(payload) {
     bug = payload;
     io.emit('bug', payload)
@@ -44,6 +48,16 @@ io.on('connect', function(socket) {
   socket.on('lowerThird', function(payload) {
     l3 = payload;
     io.emit('lowerThird', payload)
+  })
+  socket.on('l3list', function(payload) {
+    l3list = payload;
+    io.emit('l3list', l3list)
+    console.log(l3list)
+  })
+  socket.on('tickerlist', function(payload) {
+    tickerlist = payload;
+    io.emit('tickerlist', tickerlist)
+    console.log(tickerlist)
   })
 
 })

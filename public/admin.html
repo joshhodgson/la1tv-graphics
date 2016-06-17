@@ -18,14 +18,14 @@
   <div class="container">
     <h2>LA1:TV Graphics Control</h2>
     <ul class="nav nav-pills">
-      <li><a data-toggle="pill" href="#general">General</a></li>
-      <li class="active"><a data-toggle="pill" href="#lthirds">Lower Thirds</a></li>
+      <li class="active"><a data-toggle="pill" href="#general">General</a></li>
+      <li><a data-toggle="pill" href="#lthirds">Lower Thirds</a></li>
       <li><a data-toggle="pill" href="#scrollertweets">Tweet Scroller</a></li>
       <li><a data-toggle="pill" href="#scrollermanual">Manual Scroller</a></li>
     </ul>
 
     <div class="tab-content">
-      <div id="general" class="tab-pane fade">
+      <div id="general" class="tab-pane fade in active">
 
         <h1>General Graphics</h1>
         <div class="row">
@@ -73,7 +73,7 @@
           </div>
           <div class="col-sm-7">
             <h3>Lower Thirds</h3>
-            <div>
+            <div id="listOfL3">
               <!-- start -->
               <div id="blankL3" class="lowerthirdcontainer hidden">
                 <div class="btn-group-vertical">
@@ -120,7 +120,7 @@
 
 
 
-      <div id="scrollermanual" class="tab-pane fade in active">
+      <div id="scrollermanual" class="tab-pane fade">
         <h2>Ticker</h2>
         <div class="tickertextcontainer" style="height: 55px">
           <div class="btn-group">
@@ -142,7 +142,7 @@
           </div>
           <div class="col-sm-7">
             <h3>Ticker Items</h3>
-            <div>
+            <div id="listoftickeritems">
               <!-- start -->
               <div id="blankT" class="tickertextcontainer hidden">
                 <div class="btn-group-vertical">
