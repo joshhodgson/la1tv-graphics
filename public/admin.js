@@ -16,6 +16,8 @@ function addLowerThird(line1, line2) {
 
   container.find('.delete').click(function() {
     container.remove()
+    setTimeout(updateServerL3, 10)
+
   })
   container.find('.left').click(function() {
     socket.emit('lowerThird', {
@@ -39,15 +41,27 @@ function addLowerThird(line1, line2) {
     console.log('button clicked')
     if (!container.next().hasClass('hidden')){
       container.insertAfter(container.next())
+      setTimeout(updateServerL3, 10)
+
     }
   })
 
   container.find('.up').click(function() {
     console.log('button clicked')
     container.insertBefore(container.prev())
+    setTimeout(updateServerL3, 10)
+
   })
 
+  setTimeout(updateServerL3, 10)
+}
 
+function clearL3(){
+  $("#listOfL3").children().each(function(index, element){
+    if (!$(element).hasClass('hidden')){
+      $(element).remove()
+    }
+  })
 }
 var lastT = 0;
 
@@ -114,3 +128,23 @@ $(document).ready(function() {
   })
 
 })
+var l3s = [];
+
+function updateServerL3(){
+  l3s = [];
+  $("#listOfL3").children().each(function(index, element){
+    if (!$(element).hasClass('hidden')){
+      var l3 = {l1: $(element).find(".line1").text(), l2: $(element).find(".line2").text()}
+      l3s.push(l3)}
+    })
+    socket.emit('l3list', l3s)
+  }
+  socket.on('l3list', function(payload){
+    if (JSON.stringify(payload)!=JSON.stringify(l3s)){
+      clearL3()
+
+      for(var i in payload){
+        addLowerThird(payload[i].l1, payload[i].l2)
+      }
+    }
+  })
